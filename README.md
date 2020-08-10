@@ -1,4 +1,4 @@
-# proxypods
+# ezshop
 
 ## Build Setup
 
