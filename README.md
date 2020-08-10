@@ -1,4 +1,4 @@
-# ezshop
+# ezshp
 
 ## Build Setup
 
