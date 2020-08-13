@@ -6,7 +6,6 @@
           :alt="product.images[activeImage].alt"
           :src="product.images[activeImage].src"
           :zoom-src="product.images[activeImage].src"
-          class="active"
           width="100%"
           zoom-height="400"
           zoom-width="450"
@@ -82,7 +81,10 @@ export default {
     async addToCart() {
       // if the item is not in the user's cart, add it to their cart
       if (!this.itemInCart(this.product.uid)) {
-        await this.$store.dispatch('checkout/addToCart', this.product);
+        await this.$store.dispatch('checkout/addToCart', {
+          ...this.product,
+          count: this.count,
+        });
       } else {
         // if the item is already in the user's cart, update the item count
         await this.$store.dispatch('checkout/updateProductQuantity', {
@@ -92,7 +94,7 @@ export default {
       }
 
       // redirect to the checkout page
-      this.$router.replace({ path: 'checkout' });
+      this.$router.push('checkout');
     },
   },
 };

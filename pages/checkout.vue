@@ -1,8 +1,10 @@
 <template>
   <div>
     <Header />
-    <div id="container">
-      <h1 v-if="cart.length === 0">There are no items in your cart</h1>
+    <div :class="{ 'empty-cart': cart.length === 0 }" id="container">
+      <div id="empty-cart" v-if="cart.length === 0">
+        <h1>There are no items in your cart</h1>
+      </div>
 
       <div id="checkout" v-else>
         <div id="progress">
@@ -57,8 +59,7 @@
           </div>
         </form>
       </div>
-      <div id="recommended-items" v-if="cart.length === 0"></div>
-      <OrderSummary v-else />
+      <OrderSummary v-if="cart.length !== 0" />
     </div>
     <Footer />
   </div>
@@ -72,6 +73,10 @@ export default {
     ...mapState({
       cart: (state) => state.checkout.cart,
     }),
+    currentYear() {
+      const year = new Date().getFullYear().toString().substr(3, 2);
+      return year;
+    },
   },
 };
 </script>
@@ -80,6 +85,9 @@ export default {
 #container
   display: grid
   grid-template-columns: 2fr 1fr
+
+  &.empty-cart
+    grid-template-columns: 1fr
 
 h1
   color: #303030
@@ -210,6 +218,13 @@ form
 
 .buy-btn
   margin-top: 30px
+
+#empty-cart
+  padding: 30px
+
+  h1
+    margin: 0
+    text-align: center
 
 @media screen and (max-width: 1080px)
   #container

@@ -9,7 +9,10 @@
         <div>
           <div class="product-title">
             <h3><nuxt-link :to="product.slug">{{ product.title }}</nuxt-link></h3>
-            <button class="delete-btn"><i class="fas fa-times"></i></button>
+            <button
+              class="delete-btn"
+              @click="removeProduct(product.uid)"
+            ><i class="fas fa-times"></i></button>
           </div>
           <div class="count">
             <button
@@ -54,12 +57,15 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapGetters } from 'vuex';
 
 export default {
   computed: {
     ...mapState({
       cart: (state) => state.checkout.cart,
+    }),
+    ...mapGetters({
+      itemIndexByUid: 'checkout/itemIndexByUid',
     }),
     currentYear() {
       const date = new Date();
@@ -95,6 +101,10 @@ export default {
         itemIndex,
         count: productCount + val,
       });
+    },
+    removeProduct(uid) {
+      const itemIndex = this.itemIndexByUid(uid);
+      this.$store.commit('checkout/removeProduct', itemIndex);
     },
   },
 };

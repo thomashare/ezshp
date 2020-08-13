@@ -5,6 +5,9 @@ export const mutations = {
   updateProductQuantity(state, payload) {
     state.cart[payload.itemIndex].count = payload.count;
   },
+  removeProduct(state, itemIndex) {
+    state.cart.splice(itemIndex, 1);
+  },
 };
 
 export const actions = {

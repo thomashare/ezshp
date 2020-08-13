@@ -3,7 +3,7 @@
     <div class="constraint">
       <h1>{{ siteName }}</h1>
       <img alt="Reepods inside case" id="featured-image" src="ui/proxypods-in-case.png">
-      <button id="arrow-down" @click="scrollToId('features')">
+      <button id="arrow-down" @click="scrollToNextComponent">
         <img alt="skip to product description" src="ui/arrow-down.png">
       </button>
     </div>
@@ -18,8 +18,9 @@ export default {
     };
   },
   methods: {
-    scrollToId(id) {
-      const scrollTarget = document.getElementById(id);
+    scrollToNextComponent() {
+      console.log(this.$el.nextSibling.nextSibling);
+      const scrollTarget = this.$el.nextSibling.nextSibling;
 
       // scroll to the desired element ID
       scrollTarget.scrollIntoView({
@@ -60,7 +61,7 @@ export default {
   #featured-image
     margin-top: 50px
     max-width: 400px
-    z-index: 0
+    z-index: 1
 
   #arrow-down
     background-color: #FFF

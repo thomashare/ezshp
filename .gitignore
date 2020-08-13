@@ -79,6 +79,8 @@ dist
 
 # IDE / Editor
 .idea
+.editorconfig
+.vscode
 
 # Service worker
 sw.*
@@ -88,6 +90,3 @@ sw.*
 
 # Vim swap files
 *.swp
-
-# VS Code files
-.vscode
