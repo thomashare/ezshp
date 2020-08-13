@@ -19,7 +19,6 @@ export default {
   },
   methods: {
     scrollToNextComponent() {
-      console.log(this.$el.nextSibling.nextSibling);
       const scrollTarget = this.$el.nextSibling.nextSibling;
 
       // scroll to the desired element ID
