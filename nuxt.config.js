@@ -10,7 +10,7 @@ export default {
    */
   target: 'static',
   router: {
-    base: 'ezshp/'
+    base: 'ezshp'
   },
   /*
    ** Headers of the page
