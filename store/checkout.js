@@ -11,12 +11,9 @@ export const mutations = {
 };
 
 export const actions = {
-  async addToCart({ commit, dispatch }, payload) {
+  async addToCart({ commit }, payload) {
     // add the item to the cart
     await commit('addToCart', payload);
-
-    // redirect the user to the checkout page
-    this.$router.replace({ path: 'checkout' });
   },
   async updateProductQuantity({ commit }, payload) {
     await commit('updateProductQuantity', {

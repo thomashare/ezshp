@@ -53,7 +53,7 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex';
+import { mapGetters } from 'vuex';
 import { ImageMagnifier } from 'vue-image-magnifier';
 
 export default {
@@ -72,9 +72,6 @@ export default {
       itemInCart: 'checkout/itemInCart',
       itemIndexByUid: 'checkout/itemIndexByUid',
       productCartCount: 'checkout/productCartCount',
-    }),
-    ...mapActions({
-      redirectToCheckout: 'checkout/redirectToCheckout',
     }),
   },
   methods: {
