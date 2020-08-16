@@ -9,11 +9,11 @@
             to provide a better listening experience.
           </p>
         </div>
-        <button class="buy-btn" @click="$router.push('reepods-pro')">Buy Now</button>
+        <button class="buy-btn" @click="$router.push('ezshp-pro')">Buy Now</button>
       </div>
 
       <div id="images">
-        <img alt="Proxypods earbud closeup" src="ui/proxypods-earbud-closeup.png">
+        <img alt="Ezshp Pro earbud closeup" src="ui/ezshp-pro-earbud-closeup.png">
       </div>
 
       <div id="specs">

@@ -2,7 +2,7 @@
   <div id="banner">
     <div class="constraint">
       <h1>{{ siteName }}</h1>
-      <img alt="Reepods inside case" id="featured-image" src="ui/proxypods-in-case.png">
+      <img alt="Ezshp inside case" id="featured-image" src="ui/ezshp-pro-in-case.png">
       <button id="arrow-down" @click="scrollToNextComponent">
         <img alt="skip to product description" src="ui/arrow-down.png">
       </button>

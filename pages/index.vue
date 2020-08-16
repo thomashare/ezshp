@@ -3,7 +3,7 @@
     <Header />
     <Banner />
     <Features />
-    <Product id="featured-product" :product="reepodsPro" />
+    <Product id="featured-product" :product="ezshpPro" />
     <Footer />
   </div>
 </template>
@@ -16,7 +16,7 @@ export default {
     ...mapGetters({
       getProductByUid: 'products/getProductByUid',
     }),
-    reepodsPro() {
+    ezshpPro() {
       return this.getProductByUid(1);
     },
   },
