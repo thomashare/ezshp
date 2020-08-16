@@ -8,7 +8,8 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "lint": "eslint --ext .js,.vue --ignore-path .eslintignore ."
+    "lint": "eslint --ext .js,.vue --ignore-path .eslintignore .",
+    "deploy": "gh-pages -d dist"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint"
@@ -21,6 +22,7 @@
   "dependencies": {
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "dotenv": "^8.2.0",
+    "gh-pages": "^3.1.0",
     "nuxt": "^2.14.0",
     "stylus": "^0.54.8",
     "stylus-loader": "^3.0.2",
