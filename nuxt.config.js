@@ -8,6 +8,9 @@ export default {
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */
+  router: {
+    base: '/ezshp'
+  },
   target: 'static',
   /*
    ** Headers of the page
