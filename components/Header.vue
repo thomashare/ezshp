@@ -73,6 +73,7 @@ export default {
 @import '~@/assets/styl/config'
 
 header
+  box-sizing: border-box
   font-size: 1.15em
   padding: 20px 15px
 

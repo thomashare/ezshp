@@ -23,12 +23,14 @@ export default {
 
 <style lang="stylus" scoped>
   footer
+    box-sizing: border-box
     margin-top: 50px
     padding: 10px 15px
 
     .constraint
       align-items: center
       display: flex
+      flex-wrap: wrap
       justify-content: space-between
 
     a
@@ -41,4 +43,10 @@ export default {
 
     #social-media
       font-size: 2em
+
+  @media screen and (max-width: 960px)
+    footer > .constraint
+      display: grid
+      justify-content: center
+      text-align: center
 </style>
