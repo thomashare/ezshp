@@ -156,12 +156,7 @@ export default {
         order: 2
 
       #images
-        order: 1
-        top: 25px
-
-        img
-          height: auto
-          max-width: 50%
+        display: none
 
       #specs
         grid-template-columns: 1fr
