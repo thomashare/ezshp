@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="constraint">
-      <button id="mobile-menu-toggle" :class="{ toggled: showMenu }" @click="activateMobileMenu">
+      <button id="mobile-menu-toggle" :class="{ toggled: showMenu }" @click="toggleMobileMenu">
         <i class="fas" :class="!showMenu ? 'fa-bars' : 'fa-times'"></i>
       </button>
 
@@ -45,16 +45,8 @@ export default {
   mounted() {
     this.defaultBodyStyle = document.body.style;
   },
-  computed: {
-    ...mapGetters({
-      cartCount: 'checkout/cartCount',
-    }),
-  },
-  methods: {
-    activateMobileMenu() {
-      // toggle show/hide the menu
-      this.showMenu = !this.showMenu;
-
+  watch: {
+    showMenu() {
       // if showing the mobile menu, set the custom body styles
       if (this.showMenu === true) {
         Object.assign(document.body.style, {
@@ -64,6 +56,21 @@ export default {
         // set the body style to the default state
         document.body.style = this.defaultBodyStyle;
       }
+    },
+  },
+  computed: {
+    ...mapGetters({
+      cartCount: 'checkout/cartCount',
+    }),
+  },
+  methods: {
+    toggleMobileMenu() {
+      // toggle show/hide the menu
+      this.showMenu = !this.showMenu;
+    },
+    deactivateMobileMenu() {
+      // toggle show/hide the menu
+      this.showMenu = false;
     },
   },
   destroyed() {
