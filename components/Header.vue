@@ -66,6 +66,10 @@ export default {
       }
     },
   },
+  destroyed() {
+    // set the body style to the default state
+    document.body.style = this.defaultBodyStyle;
+  },
 };
 </script>
 
