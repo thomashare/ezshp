@@ -117,12 +117,13 @@ h1
   font-size: 1.15em
   justify-self: center
   min-width: 40%
+  padding: 20px
 
 #progress
   display: grid
   grid-template-columns: repeat(4, 1fr)
   justify-items: center
-  margin: 50px 0
+  margin: 10px 0 40px
 
   #progress-line
     background-color: #DDD

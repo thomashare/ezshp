@@ -189,10 +189,10 @@ export default {
         border: none
         border-radius: 5px
         display: flex
-        height: 2.25em
+        height: 3em
         justify-content: center
         padding: 0
-        width: 2em
+        width: 3em
 
       .count-value
         border: solid #666 1px

@@ -116,7 +116,6 @@ export default {
 .apply-btn
   background-color: #FFF
   border: solid lighten(primary-color, 40%) 1px
-  //border: solid #118DFF 1px
   border-radius: 5px
   color: #118DFF
   padding: 12px 30px
@@ -124,6 +123,9 @@ export default {
 #summary
   border-left: solid #EEE 1px
   justify-self: start
+
+  input
+    width: 100%
 
   h2
     font-size: 1.4em
@@ -195,6 +197,7 @@ export default {
 
   #discount
     border-top: solid #EEE 1px
+    box-sizing: border-box
     font-size: 1.2em
     margin-top: 20px
     max-width: 375px

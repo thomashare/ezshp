@@ -41,7 +41,9 @@ export default {
 
 <style lang="stylus" scoped>
   #banner
+    box-sizing: border-box
     overflow: hidden
+    padding: 20px
 
     .constraint
       display: flex
@@ -62,6 +64,7 @@ export default {
   #featured-image
     margin-top: 50px
     max-width: 400px
+    width: 100%
     z-index: 1
 
   #arrow-down
