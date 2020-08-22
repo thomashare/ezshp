@@ -160,6 +160,7 @@ export default {
         top: 25px
 
         img
+          height: auto
           max-width: 50%
 
       #specs
