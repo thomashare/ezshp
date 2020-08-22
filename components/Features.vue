@@ -106,6 +106,7 @@ export default {
       top: -15px
 
       img
+        animation: float 3s ease infinite
         max-width: 90%
         transform: rotate(20deg)
 
@@ -114,7 +115,7 @@ export default {
     border-radius: 3px
     display: grid
     grid-column: 1/-1
-    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr))
+    grid-template-columns: repeat(3, 1fr)
     justify-items: center
     margin-top: 10px
     padding: 10px 40px
@@ -158,4 +159,7 @@ export default {
 
         img
           max-width: 50%
+
+      #specs
+        grid-template-columns: 1fr
 </style>

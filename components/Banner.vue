@@ -41,6 +41,8 @@ export default {
 
 <style lang="stylus" scoped>
   #banner
+    overflow: hidden
+
     .constraint
       display: flex
       flex-direction: column

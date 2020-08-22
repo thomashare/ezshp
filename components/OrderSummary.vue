@@ -111,9 +111,12 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import '~@/assets/styl/config'
+
 .apply-btn
   background-color: #FFF
-  border: solid #118DFF 1px
+  border: solid lighten(primary-color, 40%) 1px
+  //border: solid #118DFF 1px
   border-radius: 5px
   color: #118DFF
   padding: 12px 30px
