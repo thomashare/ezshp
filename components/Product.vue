@@ -9,13 +9,6 @@
           width="100%"
           zoom-height="400"
           zoom-width="450"
-          v-if="!smallDevice"
-        />
-        <img
-          :alt="product.images[activeImage].alt"
-          :src="product.images[activeImage].src"
-          class="active"
-          v-else
         />
         <img
           :alt="image.alt"
@@ -80,13 +73,6 @@ export default {
       itemIndexByUid: 'checkout/itemIndexByUid',
       productCartCount: 'checkout/productCartCount',
     }),
-    smallDevice() {
-      if (process.client) {
-        if (window.innerWidth < 1000) return true;
-        return false;
-      }
-      return false;
-    },
   },
   methods: {
     async addToCart() {
@@ -138,7 +124,7 @@ export default {
     object-fit: cover
     width: 100%
 
-  .image-magnifier, .active
+  .image-magnifier
     box-sizing: border-box
     cursor: auto
     grid-column: 1/-1
