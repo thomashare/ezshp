@@ -148,6 +148,7 @@ header
     text-align: left
     top: 0
     width: 100%
+    z-index: 999
 
     &:focus
       border: solid #FFF 1px
@@ -202,6 +203,7 @@ header
     padding: 80px 15px 40px
     position: fixed
     top: 0
+    z-index: 2
 
     a
       margin-left: 0
