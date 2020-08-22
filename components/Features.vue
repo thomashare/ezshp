@@ -102,11 +102,13 @@ export default {
 
     #images
       display: flex
+      height: auto
       position: relative
       top: -15px
 
       img
         animation: float 3s ease infinite
+        height: auto
         max-width: 90%
         transform: rotate(20deg)
 
@@ -158,7 +160,7 @@ export default {
         top: 25px
 
         img
-          max-width: 50%
+          max-width: 100%
 
       #specs
         grid-template-columns: 1fr
