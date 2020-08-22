@@ -5,7 +5,7 @@
         <h2>Clearly <br>Superior Sound.</h2>
         <div id="info">
           <p>
-            Proxypods use the latest Airoha 1562A chipset
+            {{ siteName }} Pro uses the latest Airoha 1562A chipset
             to provide a better listening experience.
           </p>
         </div>
@@ -41,6 +41,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      siteName: process.env.name,
+    };
+  },
   methods: {
     scrollToId(id) {
       const scrollTarget = document.getElementById(id);

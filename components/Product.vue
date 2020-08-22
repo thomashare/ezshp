@@ -140,6 +140,7 @@ export default {
 
   .image-magnifier, .active
     box-sizing: border-box
+    cursor: auto
     grid-column: 1/-1
     height: auto
 
