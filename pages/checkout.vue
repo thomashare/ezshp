@@ -116,7 +116,7 @@ h1
 #checkout
   font-size: 1.15em
   justify-self: center
-  min-width: 40%
+  min-width: 50%
   padding: 20px
 
 #progress

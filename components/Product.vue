@@ -37,7 +37,7 @@
             <button @click="count--" :disabled="count === 1">
               <i class="fas fa-minus"></i>
             </button>
-            <input class="count-value" type="number" v-model="count" />
+            <input class="count-value" type="number" v-model="count" @keyup.enter="addToCart" />
             <button @click="count++"><i class="fas fa-plus"></i></button>
           </div>
           <div class="price">${{ product.price }}</div>
@@ -86,7 +86,7 @@ export default {
         // if the item is already in the user's cart, update the item count
         await this.$store.dispatch('checkout/updateProductQuantity', {
           itemIndex: this.itemIndexByUid(this.product.uid),
-          count: this.productCartCount(this.product.uid) + this.count,
+          count: this.productCartCount(this.product.uid) + Number(this.count),
         });
       }
 

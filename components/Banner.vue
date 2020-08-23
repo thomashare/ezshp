@@ -62,7 +62,7 @@ export default {
       top: 2vw
 
   #featured-image
-    margin-top: 50px
+    margin-top: 20px
     max-width: 400px
     width: 100%
     z-index: 1

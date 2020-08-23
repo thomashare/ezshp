@@ -133,11 +133,10 @@ export default {
     margin: 0
 
   h2, #products, #discount, #totals
-    padding: 20px 40px
+    box-sizing: border-box
+    padding: 20px
 
   #products
-    margin-top: 25px
-
     .product
       color: #666
       display: grid
@@ -200,7 +199,6 @@ export default {
     box-sizing: border-box
     font-size: 1.2em
     margin-top: 20px
-    max-width: 375px
 
     .code
       display: grid
@@ -223,4 +221,8 @@ export default {
     .total
       font-size: 1.4em
       font-weight: 500
+
+@media screen and (min-width: 961px)
+  #summary
+    max-width: 400px
 </style>
